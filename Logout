@@ -1,0 +1,46 @@
+class User {
+    private String username;
+    private String password;
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+}
+
+class Logout {
+    public void logout(User user) {
+        user.setUsername(null);
+        user.setPassword(null);
+    }
+}
+
+public class LoggingOut{
+    public static void main(String[] args) {
+        
+        User user = new User("aditya", "aditya");
+        //Scanner user = new Scanner(System.in);
+       
+            // Log out user
+            Logout logout = new Logout();
+            logout.logout(user);
+            System.out.println("User logged out");
+        } 
+        
+    }
