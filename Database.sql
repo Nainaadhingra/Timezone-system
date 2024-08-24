@@ -11,7 +11,7 @@ DROP TABLE IF EXISTS `emp_info`;
 CREATE TABLE `emp_info` (
   `emp_id` int NOT NULL AUTO_INCREMENT,
   `email` varchar(45) NOT NULL,
-  `phone` double NOT NULL,
+  `phone` varchar(15) NOT NULL,
   `gender` enum('Male','Female','Other') NOT NULL,
   `location` varchar(45) NOT NULL,
   PRIMARY KEY (`emp_id`),
